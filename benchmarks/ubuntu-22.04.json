@@ -1,0 +1,18 @@
+{
+  "version": "22.04",
+  "categories": [
+    {
+      "name": "1-initial-setup",
+      "controls": [
+        {
+          "id": "1.1.1.1",
+          "title": "Ensure mounting of cramfs is disabled",
+          "level": "1",
+          "automated": true,
+          "compliance_check": "lsmod | grep -q cramfs",
+          "remediation": "echo 'install cramfs /bin/true' > /etc/modprobe.d/cramfs.conf"
+        }
+      ]
+    }
+  ]
+}
